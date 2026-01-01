@@ -3,6 +3,7 @@
 **Concept type:** Modular, low-tech-first floating habitat + learning platform  
 **Author / steward (attribution):** JH Durbin (concept & narrative steward)  
 **Status:** Concept + field protocol (no deployment implied)
+- [Diagram](diagram.html)
 
 ---
 
