@@ -1,95 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MythGear: SpiderVine</title>
+  <meta charset="UTF-8" />
+  <title>SpiderLine (SpiderVine) — MythGear Commons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SpiderLine (aka SpiderVine) is a human-powered line access system for regenerative work. Core specs, safety principles, and Spoovel integration live here.">
+
   <style>
+    :root {
+      --bg: #0b0e11;
+      --fg: #e6e6e6;
+      --muted: #9aa4ad;
+      --accent: #8fd3a8;
+      --card: #151a21;
+      --border: #2a2f36;
+    }
+
     body {
-      background-color: black;
-      color: white;
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
     }
-    nav {
-      background-color: #222;
-      padding: 1em;
-      display: flex;
-      gap: 2em;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
     header {
-      text-align: center;
-      padding: 3em 1em;
-      background-color: #111;
+      max-width: 900px;
+      margin-bottom: 2rem;
     }
-    main {
-      padding: 2em;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-    section {
-      margin-bottom: 2em;
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
     }
-    h1, h2 {
-      color: #ffcc00;
+
+    p {
+      max-width: 800px;
+      color: var(--muted);
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      max-width: 900px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
     footer {
-      background-color: #222;
-      color: #888;
-      text-align: center;
-      padding: 2em 1em;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    code {
+      background: #0f1318;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9em;
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="patterns.html">Patterns</a>
-    <a href="modules.html">Modules</a>
-    <a href="applications.html">Applications</a>
-    <a href="designs.html">Designs</a>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">License</a>
-  </nav>
 
-  <header>
-    <h1>MythGear: SpiderVine</h1>
-    <p>Flexible quadricycle movement rig for land, vertical, or underwater use</p>
-  </header>
+<header>
+  <h1>SpiderLine <span style="color: var(--muted);">(aka SpiderVine)</span></h1>
+  <p>
+    A human-powered, line-based access and movement system for regenerative work.
+    Designed for forestry, camps, crossings, marine tending, and environments where
+    care matters more than speed.
+  </p>
+</header>
 
-  <main>
-    <section>
-      <h2>Overview</h2>
-      <p>The SpiderVine is a modular, open-source movement device that uses a hand-foot pedaling and cable-gear system to enable full-body locomotion along flexible or fixed cable routes. Ideal for mobility support, physical training, therapeutic movement, or safe underwater exploration.</p>
-    </section>
+<section class="section">
+  <h2>Overview</h2>
+  <p>
+    SpiderLine exists in two canonical forms:
+  </p>
+  <ul>
+    <li><strong>1-Cable SpiderLine</strong> — dynamic, skill-based, minimal material</li>
+    <li><strong>2-Cable SpiderLine</strong> — geometry-based stability, higher capacity</li>
+  </ul>
+  <p>
+    It integrates naturally with the <strong>Spoovel</strong> (field interface tool),
+    the <strong>Garden Raft</strong> (staging and continuity), and an optional
+    <strong>Spoovel Winch Module</strong> for hauling, retrieval, and emergency support.
+  </p>
+</section>
 
-    <section>
-      <h2>Core Principles</h2>
-      <ul>
-        <li>Creative Commons build for grassroots, refugee, and off-grid settings</li>
-        <li>Full-body motion: engages arms, legs, and core</li>
-        <li>Modular system: reconfigurable for indoor, outdoor, or vertical/hanging use</li>
-        <li>Accessible: built from affordable, repurposed, or locally sourced parts</li>
-      </ul>
-    </section>
+<section class="section">
+  <h2>Specifications</h2>
+  <ul>
+    <li>
+      <a href="specs/spiderline-core-v0_1.md">
+        SpiderLine Core Spec v0.1
+      </a>
+      <br />
+      <span class="muted">Canonical forms, mechanics, braking, safety layer</span>
+    </li>
+    <li>
+      <a href="specs/spoovel-winch-module-v0_1.md">
+        Spoovel Winch Module Spec v0.1
+      </a>
+      <br />
+      <span class="muted">Manual-first hauling, pulley, and retrieval capability</span>
+    </li>
+    <li>
+      <a href="specs/safety-principles-v0_1.md">
+        Safety Principles v0.1
+      </a>
+      <br />
+      <span class="muted">Non-negotiables, training assumptions, ethical boundaries</span>
+    </li>
+  </ul>
+</section>
 
-    <section>
-      <h2>Possible Applications</h2>
-      <ul>
-        <li>Rehabilitation and strength training in small spaces</li>
-        <li>Youth mobility playframe or obstacle course</li>
-        <li>Underwater reef monitoring and restoration (minimal impact)</li>
-        <li>Vertical climbing frame for training, games, or access</li>
-        <li>Emergency extraction device for cable-assisted rescues</li>
-      </ul>
-    </section>
-  </main>
+<section class="section">
+  <h2>Use Cases (Living)</h2>
+  <ul>
+    <li><code>/use-cases/forestry.md</code> — canopy access, tending, seedling work</li>
+    <li><code>/use-cases/camps-crossings.md</code> — logistics, crossings, temporary access</li>
+    <li><code>/use-cases/marine-coral.md</code> — coral tending, measurement, placement</li>
+    <li><code>/use-cases/waste-retrieval.md</code> — marine debris and controlled hauling</li>
+  </ul>
+</section>
 
-  <footer>
-    <p>MythGear: SpiderVine — a project of the Fox's Anvil Commons | Licensed under CC BY-NC-SA 4.0</p>
-  </footer>
+<section class="section">
+  <h2>Blueprints</h2>
+  <p>
+    The <code>/blueprints</code> directory is intentionally empty.
+    Drawings will be added only after field reasoning and safety constraints are settled.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Field Notes</h2>
+  <ul>
+    <li><code>/field-notes/decisions-log.md</code> — why choices were made</li>
+    <li><code>/field-notes/terminology.md</code> — shared language, no drift</li>
+  </ul>
+</section>
+
+<footer>
+  <p>
+    SpiderLine is part of <strong>MythGear Commons</strong>.
+    Designed for repairability, restraint, and regenerative care.
+  </p>
+</footer>
+
 </body>
 </html>
