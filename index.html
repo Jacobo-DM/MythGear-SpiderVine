@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>SpiderLine (SpiderVine) — MythGear Commons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SpiderLine (aka SpiderVine) is a human-powered line access system for regenerative work. Core specs, safety principles, and Spoovel integration live here.">
+  <meta name="description" content="SpiderLine (aka SpiderVine) is a human-powered line access system for regenerative work.">
 
   <style>
     :root {
@@ -22,28 +22,32 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--fg);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    header {
+    header, section {
       max-width: 900px;
       margin-bottom: 2rem;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       margin-bottom: 0.5rem;
     }
 
     h2 {
-      margin-top: 2rem;
-      font-size: 1.25rem;
+      margin-top: 2.5rem;
+      font-size: 1.35rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.25rem;
     }
 
+    h3 {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+
     p {
-      max-width: 800px;
       color: var(--muted);
     }
 
@@ -56,28 +60,21 @@
       text-decoration: underline;
     }
 
-    .section {
-      max-width: 900px;
+    .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1.25rem;
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
     }
 
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
     }
 
     li {
-      margin-bottom: 0.5rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: var(--muted);
+      margin-bottom: 0.4rem;
     }
 
     code {
@@ -85,6 +82,12 @@
       padding: 0.15rem 0.35rem;
       border-radius: 4px;
       font-size: 0.9em;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--muted);
     }
   </style>
 </head>
@@ -94,85 +97,123 @@
 <header>
   <h1>SpiderLine <span style="color: var(--muted);">(aka SpiderVine)</span></h1>
   <p>
-    A human-powered, line-based access and movement system for regenerative work.
-    Designed for forestry, camps, crossings, marine tending, and environments where
-    care matters more than speed.
+    SpiderLine is a human-powered, line-based access and movement system designed for
+    regenerative work in environments where care, repairability, and restraint matter
+    more than speed or scale.
   </p>
 </header>
 
-<section class="section">
-  <h2>Overview</h2>
+<section class="card">
+  <h2>What This Is</h2>
+
   <p>
-    SpiderLine exists in two canonical forms:
+    SpiderLine supports forestry, camps and crossings, shoreline and reef tending,
+    and other contexts where ground disturbance or heavy machinery are undesirable.
   </p>
+
+  <h3>1-Cable SpiderLine</h3>
   <ul>
-    <li><strong>1-Cable SpiderLine</strong> — dynamic, skill-based, minimal material</li>
-    <li><strong>2-Cable SpiderLine</strong> — geometry-based stability, higher capacity</li>
+    <li>Dynamic, skill-based system</li>
+    <li>Stability achieved through posture, momentum management, and braking</li>
+    <li>Minimal materials, higher learning curve</li>
   </ul>
+
+  <h3>2-Cable SpiderLine</h3>
+  <ul>
+    <li>Geometry-based stability</li>
+    <li>Load shared across two parallel cables</li>
+    <li>Higher carrying capacity and repeatability</li>
+  </ul>
+
   <p>
-    It integrates naturally with the <strong>Spoovel</strong> (field interface tool),
-    the <strong>Garden Raft</strong> (staging and continuity), and an optional
-    <strong>Spoovel Winch Module</strong> for hauling, retrieval, and emergency support.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Specifications</h2>
-  <ul>
-    <li>
-      <a href="specs/spiderline-core-v0_1.md">
-        SpiderLine Core Spec v0.1
-      </a>
-      <br />
-      <span class="muted">Canonical forms, mechanics, braking, safety layer</span>
-    </li>
-    <li>
-      <a href="specs/spoovel-winch-module-v0_1.md">
-        Spoovel Winch Module Spec v0.1
-      </a>
-      <br />
-      <span class="muted">Manual-first hauling, pulley, and retrieval capability</span>
-    </li>
-    <li>
-      <a href="specs/safety-principles-v0_1.md">
-        Safety Principles v0.1
-      </a>
-      <br />
-      <span class="muted">Non-negotiables, training assumptions, ethical boundaries</span>
-    </li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Use Cases (Living)</h2>
-  <ul>
-    <li><code>/use-cases/forestry.md</code> — canopy access, tending, seedling work</li>
-    <li><code>/use-cases/camps-crossings.md</code> — logistics, crossings, temporary access</li>
-    <li><code>/use-cases/marine-coral.md</code> — coral tending, measurement, placement</li>
-    <li><code>/use-cases/waste-retrieval.md</code> — marine debris and controlled hauling</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Blueprints</h2>
-  <p>
-    The <code>/blueprints</code> directory is intentionally empty.
-    Drawings will be added only after field reasoning and safety constraints are settled.
+    Both forms are human-powered first and designed to fail visibly rather than
+    catastrophically.
   </p>
 </section>
 
-<section class="section">
-  <h2>Field Notes</h2>
+<section class="card">
+  <h2>Companion Systems</h2>
+
+  <p><strong>The Spoovel</strong> — a field interface tool for probing, tending, measuring, placing, and retrieving.</p>
+
+  <p><strong>Garden Raft</strong> — a floating staging and continuity platform for shoreline, reef, and wetland contexts.</p>
+
+  <p><strong>Spoovel Winch Module (optional)</strong> — a manual-first attachment enabling controlled hauling,
+     pulley systems, emergency stabilization, and marine waste retrieval.</p>
+
+  <p>
+    Together they form a simple regenerative circuit:
+  </p>
+
+  <p><strong>access → action → return → adjust</strong></p>
+</section>
+
+<section class="card">
+  <h2>Design Ethic</h2>
   <ul>
-    <li><code>/field-notes/decisions-log.md</code> — why choices were made</li>
-    <li><code>/field-notes/terminology.md</code> — shared language, no drift</li>
+    <li>Human-powered first</li>
+    <li>Field-repairable with basic tools</li>
+    <li>No single point of failure</li>
+    <li>Clear training assumptions</li>
+    <li>Capacity claims are always conditional</li>
+    <li>Safety tether and capture geometry are non-negotiable</li>
   </ul>
+
+  <p>
+    SpiderLine does not pretend gravity is optional.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Repository Structure</h2>
+
+  <pre><code>/specs
+  spiderline-core-v0_1.md
+  spoovel-winch-module-v0_1.md
+  safety-principles-v0_1.md
+
+/use-cases
+  forestry.md
+  camps-crossings.md
+  marine-coral.md
+  waste-retrieval.md
+
+/blueprints
+  (intentionally empty)
+
+/field-notes
+  decisions-log.md
+  terminology.md
+</code></pre>
+</section>
+
+<section class="card">
+  <h2>Status</h2>
+  <ul>
+    <li>Concept: <strong>locked</strong></li>
+    <li>Specs: <strong>v0.1</strong></li>
+    <li>Blueprints: <strong>pending</strong></li>
+    <li>Field testing: <strong>required before load claims</strong></li>
+  </ul>
+
+  <p>
+    This is a living project. Changes should be logged with reasons.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Naming</h2>
+  <p>
+    <strong>SpiderLine</strong> — engineering and specification name<br />
+    <strong>SpiderVine</strong> — poetic / ecological alias
+  </p>
 </section>
 
 <footer>
   <p>
-    SpiderLine is part of <strong>MythGear Commons</strong>.
-    Designed for repairability, restraint, and regenerative care.
+    Part of <strong>MythGear Commons</strong>.<br />
+    SpiderLine is a regenerative tool — not a weapon, surveillance system, or
+    intimidation device. Use implies responsibility.
   </p>
 </footer>
 
